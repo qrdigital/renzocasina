@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Renzo Casina | Odontología de Alta Gama & Estética Dental</title>
+    
+    <!-- Meta etiquetas para previsualización (Open Graph) -->
+    <meta property="og:title" content="Dr. Renzo Casina | Odontología de Alta Gama">
+    <meta property="og:description" content="Atención odontológica exclusiva, diseño de sonrisa e implantología avanzada.">
+    <meta property="og:image" content="https://ventalista.lat/renzocasina/headrenzocasina.jpg">
+    <meta property="og:url" content="https://ventalista.lat/renzocasina">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://ventalista.lat/renzocasina/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://ventalista.lat/renzocasina/favicon.jpg">
+
+    <style>
+        :root {
+            --bg-main: #0b1120;
+            --card-bg: #111827;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #b38e46;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #1e293b;
+            --whatsapp-green: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            padding-bottom: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--bg-main);
+            min-height: 100vh;
+        }
+
+        /* Hero / Cabecera */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, var(--bg-main), transparent);
+        }
+
+        /* Perfil */
+        .profile-section {
+            padding: 10px 24px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .profile-subtitle {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Botón Ubicación Premium */
+        .btn-location {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--accent-gold);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-location:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+        }
+
+        /* Servicios */
+        .services-section {
+            padding: 24px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-1px);
+        }
+
+        .service-card input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--accent-gold);
+            cursor: pointer;
+        }
+
+        .service-img {
+            width: 58px;
+            height: 58px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+        }
+
+        .service-desc {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+
+        /* Botón WhatsApp Flotante */
+        .fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11,17,32,1) 80%, rgba(11,17,32,0));
+            padding: 16px 24px 24px;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .btn-whatsapp {
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Cabecera -->
+    <header class="hero">
+        <img class="hero-img" src="https://ventalista.lat/renzocasina/headrenzocasina.jpg" alt="Dr. Renzo Casina">
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- Perfil del Odontólogo -->
+    <section class="profile-section">
+        <h1 class="profile-title">Dr. Renzo Casina</h1>
+        <p class="profile-subtitle">Odontología de Alta Gama & Estética Dental</p>
+        
+        <a class="btn-location" href="https://maps.google.com" target="_blank" rel="noopener">
+            📍 Ubicación del Consultorio
+        </a>
+    </section>
+
+    <!-- Servicios Exclusivos -->
+    <section class="services-section">
+        <h2 class="section-title">Seleccione sus tratamientos de interés</h2>
+        
+        <div class="services-grid">
+            
+            <label class="service-card">
+                <input type="checkbox" class="service-check" value="Diseño de Sonrisa Digital & Carillas VIP">
+                <img class="service-img" src="https://ventalista.lat/renzocasina/renzodiseno.jpg" alt="Diseño de Sonrisa">
+                <div class="service-info">
+                    <div class="service-name">1. Diseño de Sonrisa & Carillas Ultra-Finas</div>
+                    <div class="service-desc">Planificación digital y porcelana de alta estética.</div>
+                </div>
+            </label>
+
+            <label class="service-card">
+                <input type="checkbox" class="service-check" value="Implantología Dental Avanzada & Guiada">
+                <img class="service-img" src="https://ventalista.lat/renzocasina/renzoimplantes.jpg" alt="Implantología">
+                <div class="service-info">
+                    <div class="service-name">2. Implantología Guiada & Reconstrucción</div>
+                    <div class="service-desc">Rehabilitación fija con tecnología guiada por computadora.</div>
+                </div>
+            </label>
+
+            <label class="service-card">
+                <input type="checkbox" class="service-check" value="Blanqueamiento Láser de Alta Eficiencia">
+                <img class="service-img" src="https://ventalista.lat/renzocasina/renzoblanqueamiento.jpg" alt="Blanqueamiento Láser">
+                <div class="service-info">
+                    <div class="service-name">3. Blanqueamiento Láser Executive</div>
+                    <div class="service-desc">Aclaramiento seguro de máximo nivel en una sesión.</div>
+                </div>
+            </label>
+
+            <label class="service-card">
+                <input type="checkbox" class="service-check" value="Rehabilitación Oral Integral & Coronas de Zirconio">
+                <img class="service-img" src="https://ventalista.lat/renzocasina/renzorehabilitacion.jpg" alt="Rehabilitación Oral">
+                <div class="service-info">
+                    <div class="service-name">4. Rehabilitación Oral & Zirconio</div>
+                    <div class="service-desc">Restaura la función y estética con materiales biomiméticos.</div>
+                </div>
+            </label>
+
+            <label class="service-card">
+                <input type="checkbox" class="service-check" value="Ortodoncia Invisible (Alineadores Transparentes)">
+                <img class="service-img" src="https://ventalista.lat/renzocasina/renzoalineadores.jpg" alt="Alineadores Transparentes">
+                <div class="service-info">
+                    <div class="service-name">5. Ortodoncia Invisible</div>
+                    <div class="service-desc">Alineación dental discreta sin brackets tradicionales.</div>
+                </div>
+            </label>
+
+           </div>
+    </section>
+</div>
+
+<!-- Botón Flotante Solicitar Cita -->
+<div class="fixed-bottom">
+    <button class="btn-whatsapp" onclick="solicitarCita()">
+        💬 Solicitar Cita Privada
+    </button>
+</div>
+
+<script>
+function solicitarCita() {
+    const seleccionados = [];
+    document.querySelectorAll('.service-check:checked').forEach(cb => {
+        seleccionados.push('- ' + cb.value);
+    });
+
+    let mensaje = "Estimado Dr. Renzo Casina, deseo agendar una consulta privada.";
+
+    if (seleccionados.length > 0) {
+        mensaje += "\n\nEstoy interesado en los siguientes tratamientos:\n" + seleccionados.join("\n");
+    }
+
+    const telefono = "51920832884";
+    const url = 'https://api.whatsapp.com/send?phone=' + telefono + '&text=' + encodeURIComponent(mensaje);
+    
+    window.open(url, '_blank', 'noopener');
+}
+</script>
+
+</body>
+</html>
